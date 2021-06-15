@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>A JSON PROJECT</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <form class="example">
+            <input id="sort" type="text" placeholder="Sort">
+            <input id="filter" type="text" placeholder="Search.."  onkeyup="searchFun()">
+          </form>
+
+        <table id="customers" class="table table-stripped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>SALUTATION</th>
+                <th onclick="sortTable()">FIRST NAME</th>
+                <th>LAST NAME</th>
+                <th>EMAIL</th>
+                <th>GENDER</th>
+                <th>PHONE</th>
+                <th>COUNTRY</th>
+                <th>STATE</th>
+                <th>CITY</th>
+                <th>DATE</th>
+                <th>ACTION</th>
+              </tr>
+            </thead>
+            <tbody id="data">
+                <!-- <tr>
+                    <td><input type="text" placeholder="id" id="id"/></td>
+                    <td><input type="text" placeholder="id" /></td>
+                    <td><input type="text" placeholder="id" /></td>
+                    <td><input type="text" placeholder="id" /></td>
+                    <td><button>Delete</button></td>
+                    <td><button>Edit</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+      </div> 
+        <button class="model-button">ADD DATA</button>
+
+        <div class="model-bg">
+          <div class="model">
+
+
+            <div class="wrapper">
+              <h2>USER DATA</h2>
+              <div id="error"></div>
+              <form id="form" action="#" onsubmit="return validateForm()">
+                <div class="input-group">
+                  <div class="input-box"> 
+                    <h4>ID</h4>
+                    <input type="number" id="id" placeholder="Enter Id" class="name" required>
+                    <i class="fas fa-fingerprint icon"></i>
+                  </div>
+                  <div class="input-box">
+                    <h4>SALUTATION</h4>
+                    <input type="text" id="salutation" placeholder="Enter Salutation" required class="name">
+                    <i class="fas fa-user-check icon"></i>
+                    <span class="msg" id="msgSalutation"></span>
+                  </div>
+                </div>
+
+                <div class="input-group">
+                  <div class="input-box">
+                    <h4>FIRST NAME</h4>
+                    <input type="text" id="fname" placeholder="First Name" required class="name">
+                    <i class="fa fa-user icon"></i>
+                   
+                    </div>
+                    <div class="input-box">
+                      <h4>LAST NAME</h4>
+                      <input type="text" id="lname" placeholder="Last Name" class="name" required>
+                      <i class="fa fa-user icon"></i>
+                  
+                     
+                    </div>
+                  </div>
+
+                  <div class="input-group">
+                    <div class="input-box">
+                      <h4>EMAIL</h4>
+                      <input type="email" id="email" placeholder="Email address" required class="name">
+                      <i class="far fa-envelope-open icon"></i>
+                     
+                    </div>
+                  </div>
+
+
+                  <div class="input-group">
+                    <div class="input-box">
+                      <h4>PHONE</h4>
+                      <input type="text" id="phone" placeholder="Phone" required class="name">
+                      <i class="fas fa-phone-volume icon"></i>
+                      <span class="msg" id="msgMobile"></span>
+                    </div>
+                    
+                    <div class="input-box1">
+                    <input type="radio" id="male" class="gender" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" class="gender" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" class="gender" name="gender" value="other">
+                    <label for="other">Other</label>
+                  </div>
+                  </div>
+
+
+                  <div class="input-group">
+                    <div class="input-box">
+                      <select id="input" onchange="random()">
+                        <option>select nation</option>
+                        <option>India</option>
+                        <option>USA</option>
+                      </select>
+                      <select id="select">
+                        <option>Kerala</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="input-group">
+                    <div class="input-box">
+                      <h4>EMAIL</h4>
+                      <input type="text" id="city" placeholder="Enter City" required class="name">
+                      <i class="fas fa-city icon"></i>
+                    </div>
+                  </div>
+
+                  <div class="input-group">
+                    <div class="input-box">
+                      <input type="submit" class="mbtn " id="valid" value="Submit">
+                      <input type="submit" class="mbtn-edit" value="Submit"  id="new">
+                      <!-- <button type="submit">PAY NOW</button> -->
+                    </div>
+                  </div>
+
+              </form>
+            </div>
+           
+            <span class="model-close">X</span>
+          </div>
+        </div>
+      
+
+        
+
+    <script src="./app.js"></script>
+</body>
+</html>
